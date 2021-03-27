@@ -197,14 +197,14 @@
             <li @click="MusicList('like')">
               喜欢的音乐
               <van-icon name="arrow" />
-              <span class="likenum">{{
+              <span class="likenum" v-if="likelist.length !=0">{{
                 ( 10 > likelist.length ) ? "0" + likelist.length : likelist.length
               }}</span>
             </li>
             <li @click="MusicList('recent')">
               最近播放
               <van-icon name="arrow" />
-              <span class="likenum">{{
+              <span class="likenum" v-if="recentlist.length != 0">{{
                 ( 10 > recentlist.length ) ? "0" + recentlist.length : recentlist.length
               }}</span>
             </li>
